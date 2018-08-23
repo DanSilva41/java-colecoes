@@ -4,6 +4,9 @@ import br.com.danilo.alura.Aluno;
 import br.com.danilo.alura.Aula;
 import br.com.danilo.alura.Curso;
 
+import java.util.Iterator;
+import java.util.Set;
+
 public class TestaCursoComAluno {
     public static void main(String[] args) {
         Curso javaColecoes = new Curso("Dominando as coleções do Java",
@@ -30,6 +33,19 @@ public class TestaCursoComAluno {
         Aluno william = new Aluno("William Pereira", 20171651);
         System.out.println("E esse William, está matriculado? " +javaColecoes.estaMatriculado(william));
         System.out.println("O aluno3 é igual a William: "+ aluno3.equals(william));
+
+        // Antes do Java 8
+        for (Aluno aluno : javaColecoes.getAlunos()) {
+            System.out.println(aluno);
+        }
+
+        // Antes do Java 5 - usando Iterator
+        Set<Aluno> alunos = javaColecoes.getAlunos();
+        Iterator<Aluno> iterador = alunos.iterator();
+        while (iterador.hasNext()) {
+            Aluno proximo = iterador.next();
+            System.out.println(proximo);
+        }
 
 
     }

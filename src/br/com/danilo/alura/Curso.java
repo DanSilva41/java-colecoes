@@ -8,8 +8,15 @@ public class Curso {
     private String instrutor;
     private List<Aula> aulas = new LinkedList<>();
     private Set<Aluno> alunos = new HashSet<>();
-
+//    private Set<Aluno> alunos = new LinkedHashSet<>(); // retorna um conjunto ordenado
+//    private Set<Aluno> alunos = new TreeSet<>(); // retorna um conjunto ordenado; o objeto d conjunto precisa implementar Comparable
     public Curso(String nome, String instrutor) {
+        if(nome == null) {
+            throw new NullPointerException("O nome do curso não pode ser nulo");
+        }
+        if(instrutor == null) {
+            throw new NullPointerException("O nome do instrutor não pode ser nulo");
+        }
         this.nome = nome;
         this.instrutor = instrutor;
     }

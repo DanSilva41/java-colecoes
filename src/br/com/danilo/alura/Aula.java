@@ -6,6 +6,9 @@ public class Aula implements Comparable<Aula> {
     private int tempo;
 
     public Aula(String titulo, int tempo) {
+        if(titulo == null) {
+            throw new NullPointerException("O titulo da aula não pode ser nulo");
+        }
         this.titulo = titulo;
         this.tempo = tempo;
     }
