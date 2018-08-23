@@ -1,7 +1,9 @@
 package br.com.danilo.alura.teste;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.List;
 
 public class TestaAlunos {
 
@@ -20,5 +22,8 @@ public class TestaAlunos {
 
         boolean pauloEstaMatriculado = alunos.contains("Nico Steppat");
         System.out.println(pauloEstaMatriculado);
+
+        List<String> alunosEmLista = new ArrayList<>(alunos); // Transformando em List
+        System.out.println(alunosEmLista);
     }
 }

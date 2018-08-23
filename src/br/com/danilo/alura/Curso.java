@@ -1,14 +1,13 @@
 package br.com.danilo.alura;
 
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class Curso {
 
     private String nome;
     private String instrutor;
     private List<Aula> aulas = new LinkedList<>();
+    private Set<Aluno> alunos = new HashSet<>();
 
     public Curso(String nome, String instrutor) {
         this.nome = nome;
@@ -27,6 +26,10 @@ public class Curso {
         return Collections.unmodifiableList(aulas); // Devolver uma lista somente de leitura
     }
 
+    public Set<Aluno> getAlunos() {
+        return Collections.unmodifiableSet(alunos);
+    }
+
     public void adicionaAula(Aula novaAula) {
         this.aulas.add(novaAula);
     }
@@ -38,6 +41,10 @@ public class Curso {
 //            tempoTotal += aula.getTempo();
 //        }
 //        return tempoTotal;
+    }
+
+    public void matricular(Aluno novoAluno) {
+        this.alunos.add(novoAluno);
     }
 
     @Override

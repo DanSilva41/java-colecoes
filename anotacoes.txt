@@ -22,3 +22,6 @@ Set:
     - Com o conjunto Set, não se tem a certeza da ordem dos elementos
     - Não há como buscar por indice
     - NÃO permite elementos repetidos
+    - Não pode ser ordenado
+
+É possível navegar sobre as Collections: De Set para List e/ou vice-versa.
