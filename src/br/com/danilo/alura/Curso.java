@@ -47,6 +47,10 @@ public class Curso {
         this.alunos.add(novoAluno);
     }
 
+    public  boolean estaMatriculado(Aluno aluno) {
+        return this.alunos.contains(aluno);
+    }
+
     @Override
     public String toString() {
         return "Curso{" +

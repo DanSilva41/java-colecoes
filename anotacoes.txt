@@ -24,4 +24,8 @@ Set:
     - NÃO permite elementos repetidos
     - Não pode ser ordenado
 
-É possível navegar sobre as Collections: De Set para List e/ou vice-versa.
+    É possível navegar sobre as Collections: De Set para List e/ou vice-versa.
+    - Collections.unmodifiableSet(<set>): Devolve um conjunto imutavel (útil como uma boa prática de encapsulamento)
+
+    - Collections.emptySet(): Tornar o conjunto vazio, não é possível inserir elementos
+    - Collections.synchronizedSet(<set>): Retorna uma coleção que pode ser compartilhada entre threads sem perigos.
