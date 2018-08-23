@@ -16,4 +16,4 @@ Para implementar um criterio de comparação em tempo de execução:
    <lista>.sort(Comparator.comparing(<Object>::<nomeMethodParaUsarComoComparacao>))
 
 - Quando for declarar uma List, defina o tipo mais generico na variavel
-
+- Collections.unmodifiableList(<lista>): Devolve uma lista imutavel (útil como uma boa prática de encapsulamento)
