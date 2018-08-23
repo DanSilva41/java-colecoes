@@ -17,3 +17,8 @@ Para implementar um criterio de comparação em tempo de execução:
 
 - Quando for declarar uma List, defina o tipo mais generico na variavel
 - Collections.unmodifiableList(<lista>): Devolve uma lista imutavel (útil como uma boa prática de encapsulamento)
+
+Set:
+    - Com o conjunto Set, não se tem a certeza da ordem dos elementos
+    - Não há como buscar por indice
+    - NÃO permite elementos repetidos
