@@ -6,3 +6,14 @@ List
 
  Classe Collections:
     - Ordenar lista: sort();
+
+ Para ordenar uma lista de objetos, a classe dee ser Comparable
+    (ou seja, implementar a interface Comparable e reescrever o método compareTo)
+
+Para implementar um criterio de comparação em tempo de execução:
+    Collections.sort(<lista>, Comparator.comparing(<Object>::<nomeMethodParaUsarComoComparacao>))
+   OU
+   <lista>.sort(Comparator.comparing(<Object>::<nomeMethodParaUsarComoComparacao>))
+
+- Quando for declarar uma List, defina o tipo mais generico na variavel
+
