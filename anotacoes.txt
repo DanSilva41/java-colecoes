@@ -29,3 +29,4 @@ Set:
 
     - Collections.emptySet(): Tornar o conjunto vazio, não é possível inserir elementos
     - Collections.synchronizedSet(<set>): Retorna uma coleção que pode ser compartilhada entre threads sem perigos.
+    - Procura pela tabela de espalhamento(hash), já lista verifica o método equals()

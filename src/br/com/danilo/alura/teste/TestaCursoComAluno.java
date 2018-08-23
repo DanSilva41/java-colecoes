@@ -29,5 +29,8 @@ public class TestaCursoComAluno {
 
         Aluno william = new Aluno("William Pereira", 20171651);
         System.out.println("E esse William, está matriculado? " +javaColecoes.estaMatriculado(william));
+        System.out.println("O aluno3 é igual a William: "+ aluno3.equals(william));
+
+
     }
 }
