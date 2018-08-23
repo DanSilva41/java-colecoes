@@ -1,0 +1,8 @@
+List
+    - Adicionar: add(<Object>);
+    - Remover: remove(<Object>);
+    - Pegar objeto por índice: get(<int: indice>);
+    - Tamanho da lista: size() : return int
+
+ Classe Collections:
+    - Ordenar lista: sort();
