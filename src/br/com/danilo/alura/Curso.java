@@ -10,6 +10,8 @@ public class Curso {
     private Set<Aluno> alunos = new HashSet<>();
 //    private Set<Aluno> alunos = new LinkedHashSet<>(); // retorna um conjunto ordenado
 //    private Set<Aluno> alunos = new TreeSet<>(); // retorna um conjunto ordenado; o objeto d conjunto precisa implementar Comparable
+    private Map<Integer, Aluno> matriculaParaAluno = new HashMap<>();
+
     public Curso(String nome, String instrutor) {
         if(nome == null) {
             throw new NullPointerException("O nome do curso não pode ser nulo");
@@ -52,6 +54,7 @@ public class Curso {
 
     public void matricular(Aluno novoAluno) {
         this.alunos.add(novoAluno);
+        this.matriculaParaAluno.put(novoAluno.getNumeroMatricula(), novoAluno);
     }
 
     public  boolean estaMatriculado(Aluno aluno) {
@@ -66,5 +69,11 @@ public class Curso {
                 ", tempo total='" + getTempoTotal() + '\'' +
                 ", aulas=" + aulas +
                 '}';
+    }
+
+    public Aluno buscarMtriculado(int numero) {
+        if(!this.matriculaParaAluno.containsKey(numero))
+            throw new NoSuchElementException("Matricula nao encontrado: "+ numero);
+        return this.matriculaParaAluno.get(numero);
     }
 }
